@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -8,39 +8,50 @@
 		<version>3.3.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.alien</groupId>
-	<artifactId>MoviescatalogServices</artifactId>
+	<groupId>io.javabrains</groupId>
+	<artifactId>movie-catalog-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MoviescatalogServices</name>
-	<description>Demo project for Microservices</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<name>movie-catalog-service</name>
+	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>17</java.version>
+		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>4.1.1</version>
+		</dependency>
+			<dependency>
+				<groupId>io.github.resilience4j</groupId>
+				<artifactId>resilience4j-spring-boot2</artifactId>
+				<version>1.7.0</version>
+			</dependency>
+			<dependency>
+				<groupId>io.github.resilience4j</groupId>
+				<artifactId>resilience4j-retry</artifactId>
+				<version>1.7.0</version>
+			</dependency>
+
 	</dependencies>
+
 
 	<build>
 		<plugins>
